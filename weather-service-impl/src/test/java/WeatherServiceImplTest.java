@@ -14,7 +14,7 @@ class WeatherServiceImplTest {
    /**
     * {@link WeatherServiceImpl} object.
     */
-   WeatherService weatherService;
+
 
    /**
     * Maximal temperature.
@@ -128,62 +128,62 @@ class WeatherServiceImplTest {
       weatherServiceCheckException("Blainee");
       weatherServiceCheckException("Sumase");
       weatherServiceCheckException("Lauriere");
-//      weatherServiceCheckException("Portale");
-//      weatherServiceCheckException("Gretna");
-//      weatherServiceCheckException("Pembina");
-//      weatherServiceCheckException("Evanston");
-//      weatherServiceCheckException("Baudette");
-//      weatherServiceCheckException(" Amherstburg");
-//      weatherServiceCheckException("Wyandotte");
-//      weatherServiceCheckException("Detroit");
-//      weatherServiceCheckException("Algonac");
-//      weatherServiceCheckException("Marysville");
-//      weatherServiceCheckException("Buffalo");
-//      weatherServiceCheckException("Lewiston");
-//      weatherServiceCheckException("Cape Vincent");
-//      weatherServiceCheckException("Morristown");
-//      weatherServiceCheckException("Ogdensburg");
-//      weatherServiceCheckException("Massena");
-//      weatherServiceCheckException("Rouses Point");
-//      weatherServiceCheckException("Canaan");
-//      weatherServiceCheckException("Norton");
-//      weatherServiceCheckException("Frenchville");
-//      weatherServiceCheckException("Madawaska");
-//      weatherServiceCheckException("Hamlin");
-//      weatherServiceCheckException("Limestone");
-//      weatherServiceCheckException("Easton");
-//      weatherServiceCheckException("Blaine");
-//      weatherServiceCheckException("Bridgewater");
-//      weatherServiceCheckException("Monticello");
-//      weatherServiceCheckException("Littleton");
-//      weatherServiceCheckException("Houlton");
-//      weatherServiceCheckException("Hodgdon");
-//      weatherServiceCheckException("Cary");
-//      weatherServiceCheckException("Amity");
-//      weatherServiceCheckException("Orient");
-//      weatherServiceCheckException("Weston");
-//      weatherServiceCheckException("Danforth");
-//      weatherServiceCheckException("Baileyville");
-//      weatherServiceCheckException("Vanceboro");
-//      weatherServiceCheckException("Baring");
-//      weatherServiceCheckException("Calais");
-//      weatherServiceCheckException("Robbinston");
-//      weatherServiceCheckException("Perry");
-//      weatherServiceCheckException("Eastport");
-//      weatherServiceCheckException("Lubec");
-////Within Canada
-//      weatherServiceCheckException("Morrisburg");
-//      weatherServiceCheckException("Lloydminster");
-//      weatherServiceCheckException("Flin Flon");
-//      weatherServiceCheckException("Ottawa");
-//      //United States/Mexico
-//      weatherServiceCheckException("San Diego");
-//      weatherServiceCheckException("Tecate");
-//      weatherServiceCheckException("Calexico");
-//      weatherServiceCheckException("Gadsden");
-//      weatherServiceCheckException("Yuma");
-//      weatherServiceCheckException("Sonoyta");
-//      weatherServiceCheckException("Naco");
+      weatherServiceCheckException("Portale");
+      weatherServiceCheckException("Gretasdana");
+      weatherServiceCheckException("Pembasdina");
+      weatherServiceCheckException("Evanssdaston");
+      weatherServiceCheckException("Bauasddette");
+      weatherServiceCheckException(" Amaadsherstburg");
+      weatherServiceCheckException("Wyanasddotte");
+      weatherServiceCheckException("Detrasdoit");
+      weatherServiceCheckException("Algasdonac");
+      weatherServiceCheckException("Maryasdsville");
+      weatherServiceCheckException("Buasffalo");
+      weatherServiceCheckException("Lewiasdaston");
+      weatherServiceCheckException("Cape Viasdncent");
+      weatherServiceCheckException("Morriasdstown");
+      weatherServiceCheckException("Ogdenasdsburg");
+      weatherServiceCheckException("Massadena");
+      weatherServiceCheckException("Rousades Point");
+      weatherServiceCheckException("Cansdsaan");
+      weatherServiceCheckException("Norsdaton");
+      weatherServiceCheckException("Freadsnchville");
+      weatherServiceCheckException("Madasdawaska");
+      weatherServiceCheckException("Hamqewlin");
+      weatherServiceCheckException("Limqweestone");
+      weatherServiceCheckException("Eaqreston");
+      weatherServiceCheckException("Blaqewrine");
+      weatherServiceCheckException("Briqrdgewater");
+      weatherServiceCheckException("Monqrticello");
+      weatherServiceCheckException("Litqwetleton");
+      weatherServiceCheckException("Houqwerlton");
+      weatherServiceCheckException("Hodqwergdon");
+      weatherServiceCheckException("Caqwrery");
+      weatherServiceCheckException("Amqewrity");
+      weatherServiceCheckException("Orqrient");
+      weatherServiceCheckException("Wesaston");
+      weatherServiceCheckException("Danwforth");
+      weatherServiceCheckException("Bailweeyville");
+      weatherServiceCheckException("Vancdeboro");
+      weatherServiceCheckException("Barweing");
+      weatherServiceCheckException("Calweais");
+      weatherServiceCheckException("Robwebinston");
+      weatherServiceCheckException("Perwery");
+      weatherServiceCheckException("Easwetport");
+      weatherServiceCheckException("Lubweec");
+//Within Canada
+      weatherServiceCheckException("Morrrrisburg");
+      weatherServiceCheckException("Lloydfttminster");
+      weatherServiceCheckException("Flinre Flon");
+      weatherServiceCheckException("Ottaewwa");
+      //United States/Mexico
+      weatherServiceCheckException("San DDdiego");
+      weatherServiceCheckException("Tecadte");
+      weatherServiceCheckException("Calexcdico");
+      weatherServiceCheckException("Gadsdecn");
+      weatherServiceCheckException("Yumac");
+      weatherServiceCheckException("Soneroyta");
+      weatherServiceCheckException("Nareco");
    }
 
 
@@ -194,6 +194,7 @@ class WeatherServiceImplTest {
     * @param city name of the city for searching weather
     */
    public void checkValidationWeatherDataDto(String city) throws WeatherException {
+      WeatherService weatherService = new WeatherServiceImpl();
       WeatherDataDto weatherDataDto = weatherService.getWeatherData(city);
 
       assertFalse(weatherDataDto.getWeather().get(0).getDescription().isEmpty());
@@ -210,10 +211,12 @@ class WeatherServiceImplTest {
    }
 
    /**
-    * Checking that an org.apache.karaf.weather.services.exception is performed.
+    * Checking that an {@link WeatherException} has occurred.
     * @param city name of the city for searching weather
     */
    public void weatherServiceCheckException(String city)  {
+      WeatherService weatherService = new WeatherServiceImpl();
+
       try {
          weatherService.getWeatherData(city);
          fail("Exception was not thrown");

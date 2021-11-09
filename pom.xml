@@ -19,7 +19,6 @@
     </dependencies>
     <modules>
         <module>weather-service-impl</module>
-        <module>karaf-rest-weather-api</module>
         <module>karaf-rest-weather-blueprint</module>
         <module>karaf-rest-weather-features</module>
     </modules>

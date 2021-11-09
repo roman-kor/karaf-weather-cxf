@@ -5,7 +5,7 @@ import org.apache.karaf.weather.services.WeatherServiceImpl;
 import org.apache.karaf.weather.services.exception.WeatherException;
 
 public class WeatherServiceRestImpl implements WeatherServiceRest {
-   private WeatherService weatherService;
+   private final WeatherService weatherService;
 
    public WeatherServiceRestImpl(WeatherServiceImpl weatherService) {
       this.weatherService = weatherService;
