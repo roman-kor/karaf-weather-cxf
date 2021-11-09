@@ -11,6 +11,8 @@
       <set>
         <option value="$PROJECT_DIR$/feature/pom.xml" />
         <option value="$PROJECT_DIR$/karaf-rest-example-feature/pom.xml" />
+        <option value="$PROJECT_DIR$/karaf-rest-weather-api/pom.xml" />
+        <option value="$PROJECT_DIR$/karaf-rest-weather-client-cxf/pom.xml" />
         <option value="$PROJECT_DIR$/weather-rest/pom.xml" />
       </set>
     </option>

@@ -14,7 +14,7 @@ class WeatherServiceImplTest {
    /**
     * {@link WeatherServiceImpl} object.
     */
-   WeatherService weatherService = WeatherServiceImpl.getInstance();
+   WeatherService weatherService;
 
    /**
     * Maximal temperature.

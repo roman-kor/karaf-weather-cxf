@@ -14,12 +14,11 @@
        Dependency Versions
        -->
 
-<dependencies>
-    <!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin -->
-</dependencies>
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin -->
+    </dependencies>
     <modules>
         <module>weather-service-impl</module>
-        <module>karaf-rest-weather-client-cxf</module>
         <module>karaf-rest-weather-api</module>
         <module>karaf-rest-weather-blueprint</module>
         <module>karaf-rest-weather-features</module>

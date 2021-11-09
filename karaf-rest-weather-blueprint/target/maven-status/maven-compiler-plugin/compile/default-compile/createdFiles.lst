@@ -1,1 +1,2 @@
 org/apache/karaf/weather/rest/blueprint/WeatherServiceRest.class
+org/apache/karaf/weather/rest/blueprint/WeatherServiceRestImpl.class

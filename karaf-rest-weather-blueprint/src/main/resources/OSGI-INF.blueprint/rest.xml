@@ -16,15 +16,21 @@
         </cxf:features>
     </cxf:bus>
 
-    <jaxrs:server id="weatherRest" address="/weather">
+    <jaxrs:server id="weatherRest" address="/getweather">
         <jaxrs:serviceBeans>
-            <ref component-id="weatherBean" />
+            <ref component-id="weatherBean"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
         </jaxrs:providers>
     </jaxrs:server>
 
-    <bean id="weatherBean" class="org.apache.karaf.examples.rest.blueprint.WeatherServiceRest"/>
+    <bean id="weatherBean" class="org.apache.karaf.examples.rest.blueprint.WeatherServiceRestImpl">
+        <argument ref="weatherServiceBean"/>
+    </bean>
+
+    <reference id="weatherServiceBean" interface="org.apache.karaf.weather.services.WeatherService">
+
+    </reference>
 
 </blueprint>

@@ -17,15 +17,15 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="karaf-rest-weather-api" />
         <module name="karaf-rest-weather-blueprint" />
         <module name="weather-service-impl" />
-        <module name="karaf-rest-weather-client-cxf" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="feature" target="8" />
       <module name="karaf-rest-example-feature" target="8" />
+      <module name="karaf-rest-weather-api" target="8" />
+      <module name="karaf-rest-weather-client-cxf" target="1.7" />
       <module name="weather-rest" target="1.5" />
     </bytecodeTargetLevel>
   </component>

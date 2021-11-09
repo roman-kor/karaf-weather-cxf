@@ -12,10 +12,10 @@ import java.net.URL;
 
 @Slf4j
 public class WeatherServiceImpl implements WeatherService {
-   /**
-    * Private instance of {@link WeatherServiceImpl}, so that it can be accessed by only by getInstance() method
-    */
-   private static WeatherServiceImpl weatherServiceImplInstance;
+//   /**
+//    * Private instance of {@link WeatherServiceImpl}, so that it can be accessed by only by getInstance() method
+//    */
+//   private static WeatherServiceImpl weatherServiceImplInstance;
    /**
     * Bad Request response status code indicates that the server cannot or
     * will not process the request due to something that is perceived to be a client error.
@@ -27,16 +27,16 @@ public class WeatherServiceImpl implements WeatherService {
     */
    private WeatherServiceImpl() {
    }
-
-   /**
-    * Synchronized method to control simultaneous access
-    */
-   public static synchronized WeatherServiceImpl getInstance() {
-      if (weatherServiceImplInstance == null) {
-         weatherServiceImplInstance = new WeatherServiceImpl();
-      }
-      return weatherServiceImplInstance;
-   }
+//
+//   /**
+//    * Synchronized method to control simultaneous access
+//    */
+//   public static synchronized WeatherServiceImpl getInstance() {
+//      if (weatherServiceImplInstance == null) {
+//         weatherServiceImplInstance = new WeatherServiceImpl();
+//      }
+//      return weatherServiceImplInstance;
+//   }
 
 
 /**
