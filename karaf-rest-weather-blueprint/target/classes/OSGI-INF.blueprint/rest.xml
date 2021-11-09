@@ -9,11 +9,16 @@
              http://cxf.apache.org/blueprint/jaxrs http://cxf.apache.org/schemas/blueprint/jaxrs.xsd
              http://cxf.apache.org/blueprint/core http://cxf.apache.org/schemas/blueprint/core.xsd
              ">
+    <!-- JAXRS providers -->
+    <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 
     <cxf:bus id="cxfBusWeather">
         <cxf:features>
             <cxf:logging/>
         </cxf:features>
+        <cxf:properties>
+            <entry key="skip.default.json.provider.registration" value="true" />
+        </cxf:properties>
     </cxf:bus>
 
     <jaxrs:server id="weatherRest" address="/getweather">
@@ -21,7 +26,7 @@
             <ref component-id="weatherBean"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
-            <bean class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+            <ref component-id="jsonProvider" />
         </jaxrs:providers>
     </jaxrs:server>
 

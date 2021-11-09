@@ -1,2 +1,3 @@
 /home/koreniev/Projects/weather/karaf-weather-cxf/karaf-rest-weather-blueprint/src/main/java/org/apache/karaf/weather/rest/blueprint/WeatherServiceRest.java
 /home/koreniev/Projects/weather/karaf-weather-cxf/karaf-rest-weather-blueprint/src/main/java/org/apache/karaf/weather/rest/blueprint/WeatherServiceRestImpl.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/karaf-rest-weather-blueprint/src/main/java/org/apache/karaf/weather/rest/blueprint/RestActivator.java
