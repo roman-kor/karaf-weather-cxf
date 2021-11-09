@@ -1,0 +1,8 @@
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/dto/WeatherInfo.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/WeatherServiceImpl.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/dto/SystemInfo.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/dto/TemperatureInfo.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/dto/WeatherDataDto.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/dto/LocationInfo.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/WeatherService.java
+/home/koreniev/Projects/weather/karaf-weather-cxf/weather-service-impl/src/main/java/org/apache/karaf/weather/services/exception/WeatherException.java

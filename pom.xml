@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.example</groupId>
+    <artifactId>karaf-weather-cxf</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Apache Karaf :: Weather :: REST</name>
+    <packaging>pom</packaging>
+
+    <!--
+       Dependency Versions
+       -->
+
+<dependencies>
+    <!-- https://mvnrepository.com/artifact/org.apache.felix/maven-bundle-plugin -->
+</dependencies>
+    <modules>
+        <module>weather-service-impl</module>
+        <module>karaf-rest-weather-client-cxf</module>
+        <module>karaf-rest-weather-api</module>
+        <module>karaf-rest-weather-blueprint</module>
+        <module>karaf-rest-weather-features</module>
+    </modules>
+
+    <properties>
+        <!--
+   Dependency Versions
+   -->
+        <jackson.version>2.12.5</jackson.version>
+
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+
+</project>
