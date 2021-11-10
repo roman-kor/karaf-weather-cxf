@@ -19,8 +19,11 @@ public class WeatherServiceImpl implements WeatherService {
     */
    private final int ERROR_CODE = 400;
 
+   public WeatherServiceImpl() {
+      System.out.println("test");
+   }
 
-/**
+   /**
  * Get current weather by longitude and latitude.
  *
  * @param cityName name of the city for weather search

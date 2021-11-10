@@ -2,9 +2,19 @@
 <project version="4">
   <component name="RemoteRepositoriesConfiguration">
     <remote-repository>
+      <option name="id" value="nexus" />
+      <option name="name" value="nexus.cengage.info" />
+      <option name="url" value="https://artifactory.cengage.info/artifactory/cengage-central-maven" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="jboss-public-repository-group" />
       <option name="name" value="JBoss Public Repository Group" />
       <option name="url" value="https://repository.jboss.org/nexus/content/groups/public/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="central" />
+      <option name="name" value="artifactory.cengage.info-releases" />
+      <option name="url" value="https://artifactory.cengage.info/artifactory/cengage-central-maven" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="central" />

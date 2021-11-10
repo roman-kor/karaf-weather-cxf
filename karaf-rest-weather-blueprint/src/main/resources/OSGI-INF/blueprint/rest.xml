@@ -12,6 +12,12 @@
     <!-- JAXRS providers -->
     <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider" />
 
+    <bean id="weatherBean" class="org.apache.karaf.weather.rest.blueprint.WeatherServiceRestImpl">
+        <argument ref="weatherServiceBean"/>
+    </bean>
+
+    <reference id="weatherServiceBean" interface="org.apache.karaf.weather.services.WeatherService"/>
+
     <cxf:bus id="cxfBusWeather">
         <cxf:features>
             <cxf:logging/>
@@ -21,7 +27,7 @@
         </cxf:properties>
     </cxf:bus>
 
-    <jaxrs:server id="weatherRest" address="/getweather">
+    <jaxrs:server id="weatherRest" address="/get" >
         <jaxrs:serviceBeans>
             <ref component-id="weatherBean"/>
         </jaxrs:serviceBeans>
@@ -29,13 +35,5 @@
             <ref component-id="jsonProvider" />
         </jaxrs:providers>
     </jaxrs:server>
-
-    <bean id="weatherBean" class="org.apache.karaf.examples.rest.blueprint.WeatherServiceRestImpl">
-        <argument ref="weatherServiceBean"/>
-    </bean>
-
-    <reference id="weatherServiceBean" interface="org.apache.karaf.weather.services.WeatherService">
-
-    </reference>
 
 </blueprint>

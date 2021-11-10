@@ -12,7 +12,7 @@
 
     <artifactId>karaf-rest-weather-features</artifactId>
     <name>Apache Karaf :: Weather :: REST :: Features</name>
-    <packaging>pom</packaging>
+    <packaging>bundle</packaging>
 
     <build>
         <resources>
