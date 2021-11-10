@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bnd-LastModified: 1636528512861
+Bnd-LastModified: 1636530509662
 Build-Jdk: 1.8.0_302
 Built-By: koreniev
 Bundle-Activator: org.apache.karaf.weather.rest.blueprint.RestActivator

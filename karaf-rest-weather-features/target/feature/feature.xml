@@ -5,11 +5,10 @@
     <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.1.5/xml/features</repository>
 
     <feature name="weather-service-impl" version="1.0-SNAPSHOT">
-        <bundle>mvn:org.example/weather-service-impl/1.0-SNAPSHOT</bundle>
+        <bundle>wrap:mvn:org.example/weather-service-impl/1.0-SNAPSHOT</bundle>
     </feature>
 
-    <feature name="karaf-rest-example-blueprint" version="1.0-SNAPSHOT">
-        <feature version="1.0-SNAPSHOT">karaf-rest-weather-api</feature>
+    <feature name="karaf-rest-weather-blueprint" version="1.0-SNAPSHOT">
         <feature version="1.0-SNAPSHOT">weather-service-impl</feature>
         <requirement>osgi.service;effective:=active;filter:=(objectClass=org.osgi.service.http.HttpService)</requirement>
         <feature dependency="true">aries-blueprint</feature>
@@ -19,7 +18,7 @@
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.12.5</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.12.5</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.12.5</bundle>
-        <bundle>mvn:org.example/karaf-rest-weather-blueprint/1.0-SNAPSHOT</bundle>
+        <bundle>wrap:mvn:org.example/karaf-rest-weather-blueprint/1.0-SNAPSHOT</bundle>
     </feature>
 
 
