@@ -5,11 +5,10 @@
     <repository>mvn:org.apache.cxf.karaf/apache-cxf/3.1.5/xml/features</repository>
 
     <feature name="weather-service-impl" version="${project.version}">
-        <bundle>mvn:org.example/weather-service-impl/${project.version}</bundle>
+        <bundle>wrap:mvn:org.example/weather-service-impl/${project.version}</bundle>
     </feature>
 
-    <feature name="karaf-rest-example-blueprint" version="${project.version}">
-        <feature version="${project.version}">karaf-rest-weather-api</feature>
+    <feature name="karaf-rest-weather-blueprint" version="${project.version}">
         <feature version="${project.version}">weather-service-impl</feature>
         <requirement>osgi.service;effective:=active;filter:=(objectClass=org.osgi.service.http.HttpService)</requirement>
         <feature dependency="true">aries-blueprint</feature>
@@ -19,7 +18,7 @@
         <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/${jackson.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/${jackson.version}</bundle>
         <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/${jackson.version}</bundle>
-        <bundle>mvn:org.example/karaf-rest-weather-blueprint/${project.version}</bundle>
+        <bundle>wrap:mvn:org.example/karaf-rest-weather-blueprint/${project.version}</bundle>
     </feature>
 
 
