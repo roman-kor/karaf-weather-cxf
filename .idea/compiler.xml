@@ -17,9 +17,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="karaf-rest-weather-blueprint" />
+        <module name="karaf-rest-weather-service" />
         <module name="karaf-rest-weather-features" />
-        <module name="weather-service-impl" />
+        <module name="karaf-rest-weather-service-impl" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

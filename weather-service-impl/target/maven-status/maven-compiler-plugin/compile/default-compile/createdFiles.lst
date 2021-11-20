@@ -1,9 +1,0 @@
-org/apache/karaf/weather/services/dto/LocationInfo.class
-org/apache/karaf/weather/services/dto/TemperatureInfo.class
-org/apache/karaf/weather/services/WeatherServiceImpl.class
-org/apache/karaf/weather/services/exception/WeatherException.class
-org/apache/karaf/weather/services/WeatherService.class
-org/apache/karaf/weather/services/dto/WeatherInfo.class
-org/apache/karaf/weather/services/ServiceActivator.class
-org/apache/karaf/weather/services/dto/SystemInfo.class
-org/apache/karaf/weather/services/dto/WeatherDataDto.class
